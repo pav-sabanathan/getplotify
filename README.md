@@ -23,4 +23,4 @@ to track when new episodes drop. This tool solves that.
 | /case-study | End-to-end case study write-up |
 
 ## Live Product
-🔗 [Link to Lovable build coming soon]
+🔗 [StreamLine — Live Product](https://watch-track-sync.lovable.app)
