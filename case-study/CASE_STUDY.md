@@ -11,7 +11,7 @@
 | **Status** | ✅ MVP Live |
 | **Built With** | Lovable |
 | **Live Product** | [Plotify](https://getplotify.vercel.app) |
-| **GitHub** | [View Repository](https://github.com/pav-sabanathan/episode-tracker-release-calendar) |
+| **GitHub** | [View Repository](https://github.com/pav-sabanathan/plotify) |
 
 ---
 
