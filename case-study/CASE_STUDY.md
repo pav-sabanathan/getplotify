@@ -1,10 +1,18 @@
-# Case Study: StreamLine — Episode Tracker & Release Calendar
+# Case Study: Plotify — Episode Tracker & Release Calendar
 
-**Author:** Pav Sabanathan
-**Started:** March 2026
-**Status:** MVP Live
-**Built With:** Lovable
-**Live Product:** [Plotify](https://getplotify.vercel.app)
+> A PM with no engineering background, a real problem, and a PRD. Here's what happened next.
+
+---
+
+| | |
+|---|---|
+| **Author** | Pav Sabanathan |
+| **Started** | March 2026 |
+| **Status** | ✅ MVP Live |
+| **Built With** | Lovable |
+| **Live Product** | [Plotify](https://getplotify.vercel.app) |
+| **GitHub** | [View Repository](https://github.com/pav-sabanathan/episode-tracker-release-calendar) |
+
 ---
 
 ## 1. The Problem
