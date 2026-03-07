@@ -2,7 +2,7 @@
 
 **Author:** Pav Sabanathan  
 **Created:** March 2026  
-**Status:** Beta Released March 2026
+**Status:** Beta Released March 2026  
 **Version:** 1.0
 
 ---
