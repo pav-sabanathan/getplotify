@@ -159,6 +159,72 @@ product decisions were already made — the prompt was simply
 translating them into instructions. This discipline is worth 
 carrying into every AI-assisted build.
 
+**Round 3 — Pre-V2 Polish & Build Recovery**
+
+The Pre-V2 Polish update (empty states, onboarding, error 
+handling, favicon, feedback mechanism, and legal pages) 
+initially failed due to a build error introduced when 
+Lovable added the favicon to index.html. The error:
+
+"end-tag-without-matching-open-element"
+
+...was caused by a malformed HTML tag that broke the 
+Vite build entirely, making the preview unresponsive. 
+The fix prompt resolved the underlying HTML issue but 
+the preview still wasn't reflecting the changes.
+
+**What I did:**
+Rather than continuing to iterate on a potentially 
+unstable build, I made the deliberate decision to 
+revert the repository to the last known good state 
+and start the Polish update fresh. This decision cost 
+time but removed the risk of compounding errors on 
+top of an already broken foundation.
+
+The Polish update was then split into two focused 
+prompts rather than one combined prompt — the approach 
+that had worked cleanly in the original V1 build:
+
+- Prompt 1: Empty states, onboarding flow, and 
+  error handling
+- Prompt 2: Favicon, feedback mechanism, and 
+  legal pages
+
+Both prompts executed cleanly on the second attempt.
+
+**The Reset Button Problem**
+
+During testing of the onboarding flow and empty states, 
+a secondary issue emerged. A "Reset app data" button 
+had been added as a developer testing utility, but 
+clicking it caused the sample shows to persist even 
+after the reset. The root cause, identified through 
+Lovable's own reasoning:
+
+*"The page reloaded but shows are back — this is 
+because loadShows() returns SAMPLE_SHOWS when there's 
+no localStorage key (first visit). The reset clears 
+localStorage, so the reload sees no key and re-seeds 
+with samples. I need to set a flag during reset so 
+the app knows it was intentionally cleared."*
+
+In plain English: clearing the data and reloading 
+the app triggered the same logic that runs on first 
+visit — which re-seeds the app with sample shows 
+automatically. The fix was to write a separate flag 
+to localStorage during a reset, telling the app to 
+treat the reload as an intentional clean state rather 
+than a genuine first visit.
+
+**Key process learning:** A combined prompt that 
+tries to do too much in one generation increases 
+the risk of subtle conflicts in the output. Smaller, 
+focused prompts are more predictable and easier to 
+debug when something goes wrong. This mirrors a 
+principle from software development — small, 
+atomic commits are easier to revert than large, 
+sweeping changes.
+
 ---
 
 ## 6. What I'd Build Next
