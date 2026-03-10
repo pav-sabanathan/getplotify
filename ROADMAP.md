@@ -108,6 +108,13 @@ engineering collaborator before starting.
   watch progress data
 - Guest mode with sign-in prompt for unauthenticated users
 - User avatar and account menu in app header
+  
+### 🔭 V5 — Additional Scope Note
+Replace mock show database (introduced in V2) with 
+a live TMDb API integration. API key to be stored 
+server-side via Supabase to avoid front-end exposure. 
+Attribution required: "This product uses the TMDb 
+API but is not endorsed or certified by TMDb."
 
 ---
 
