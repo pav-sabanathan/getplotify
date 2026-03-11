@@ -65,6 +65,8 @@ user needs identified post-MVP.
 - Episode watch tracking with per-episode checkboxes
 - Watch progress indicator on My Shows cards
 - Show detail panel with full episode list
+- Calendar episode pills link to Show Detail 
+  panel for direct watch tracking access
 
 ---
 
