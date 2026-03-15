@@ -197,6 +197,70 @@ Both prompts executed cleanly on the second attempt.
 With the core Polish update shipped, a second round 
 of improvements focused on three areas: branding, 
 data behaviour, and mobile experience.
+**V2 — Core Feature Expansion**
+
+V2 introduced three major feature areas that 
+transformed Plotify from a simple calendar 
+tracker into a more complete TV companion product.
+
+**Mock Show Database & Search**
+The manual-entry-only model from V1 was replaced 
+with a searchable mock database of 20+ current 
+shows with real metadata — platform, release 
+schedule, season, episode count, and description. 
+Real-time search filters from 2 characters, and 
+selecting a show auto-populates the calendar 
+with upcoming episodes immediately. Manual entry 
+remains available for shows not in the database.
+
+The database was curated specifically for a 
+Canadian and UK audience, reflecting the actual 
+streaming landscape in both markets — including 
+shows on BBC iPlayer, Disney+, Apple TV, and 
+Prime Video alongside Netflix. Shows only 
+available on unsupported platforms (Sky, HBO Max, 
+Paramount+) are intentionally excluded from search 
+and flagged as manual-entry only.
+
+**ICS Calendar Export**
+Each tracked show in My Shows gained an Export 
+to Calendar button that generates a standards-
+compliant .ICS file containing all upcoming 
+episodes for the current season as individual 
+calendar events. Compatible with Google Calendar, 
+Apple Calendar, and Outlook. Generated entirely 
+client-side with no backend dependency.
+
+**Episode Watch Tracking**
+Show posters in My Shows became interactive — 
+tapping opens a Show Detail panel with a full 
+episode list, per-episode checkboxes, a progress 
+bar, and a bulk Mark All Watched action. A key 
+UX decision was making the calendar an entry 
+point for watch tracking too — tapping an 
+episode pill on the calendar opens the Show 
+Detail panel scrolled directly to that episode, 
+reducing the steps needed to log a watched 
+episode from the release schedule view.
+
+**UX Fixes Discovered During Testing**
+Two additional improvements were identified 
+during V2 testing:
+
+- The manual Add Show form had no way to 
+  dismiss it once opened — a clear × button 
+  was added to collapse the form and return 
+  to the default search state
+- Form state was not preserved when navigating 
+  between tabs — mid-entry data was lost if 
+  the user switched to Home or My Shows. 
+  Session-level state persistence was added 
+  so all form fields are restored on return
+
+Both fixes were implemented as a focused prompt 
+between V2 Prompt 1 and Prompt 2 to avoid 
+introducing conflicts into an already complex 
+update.
 
 **Branding**
 A Plotify logo was designed in Canva and integrated 
