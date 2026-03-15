@@ -42,6 +42,12 @@ Each decision document follows the same structure:
 | Logo made interactive — click navigates to Home | Pre-V2 Polish | Standard web convention that reduces navigation friction from any screen |
 | Show initials as fallback poster | Pre-V2 Polish | No artwork API available at this stage — initials (e.g. F.G.) are more informative than a generic TV icon and scale to any show name |
 | Calendar pills link to watch tracking | V2 | Calendar should be an entry point for marking episodes watched, not just a passive release schedule view — reduces the steps needed to log a watched episode |
+| Curate mock database for Canadian and UK streaming landscape | V2 | Target audience spans both markets — excluding unsupported platforms avoids user confusion |
+| Manual entry remains alongside search | V2 | Search covers 20+ shows but cannot cover every show — manual entry ensures 100% watchlist coverage |
+| Calendar pills as watch tracking entry point | V2 | Reduces steps to log a watched episode — calendar is already the primary navigation surface |
+| ICS export generated client-side only | V2 | No backend dependency at this stage — client-side blob generation is sufficient and keeps architecture simple |
+| Form state persists for session only, not across refreshes | V2 | Full persistence would require localStorage schema changes — session-only is sufficient for the UX problem being solved |
+| Dismiss button added to manual Add Show form | V2 | No escape hatch once form was opened — × button restores expected interaction pattern |
 
 ---
 
