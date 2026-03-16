@@ -65,6 +65,12 @@ prompt, deployed independently on Vercel.
       panel for direct watch tracking access
 - [x] Dismiss button on manual Add Show form
 - [x] Add Show form state persists across tab navigation
+- [ ] - [x] Export to Calendar button colour standardised 
+      to white across all platforms
+- [x] ICS file Android compatibility fixed — 
+      CRLF line endings, required VEVENT fields, 
+      UTC timestamp
+- [x] Favicon updated to icon mark only (no wordmark)
 
 ---
 
