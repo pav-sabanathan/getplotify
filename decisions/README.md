@@ -48,6 +48,9 @@ Each decision document follows the same structure:
 | ICS export generated client-side only | V2 | No backend dependency at this stage — client-side blob generation is sufficient and keeps architecture simple |
 | Form state persists for session only, not across refreshes | V2 | Full persistence would require localStorage schema changes — session-only is sufficient for the UX problem being solved |
 | Dismiss button added to manual Add Show form | V2 | No escape hatch once form was opened — × button restores expected interaction pattern |
+| Export button standardised to white | V2 | Platform accent colours vary in brightness — white ensures consistent visibility in dark mode across all platforms |
+| ICS Android fix — CRLF and required fields | V2 | Android calendar parsers are strict about line endings and mandatory VEVENT fields — LF-only files fail silently |
+| Favicon changed to icon mark only | V2 | Wordmark unreadable at favicon scale — icon mark only improves brand recognition in browser tabs and bookmarks |
 
 ---
 
